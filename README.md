@@ -22,3 +22,27 @@ Production-style backend application built with Spring Boot, featuring secure RE
 - Maven, JUnit, Testcontainers
 
 ## Project Structure (High-Level)
+## Getting Started
+
+### 1) Prerequisites
+- Java 17
+- Maven
+- PostgreSQL (or Docker)
+- AWS credentials (only needed if testing S3 uploads)
+
+### 2) Configure Environment
+Update `src/main/resources/application.yml` with:
+- PostgreSQL connection details
+- JWT secret / expiration
+- AWS S3 bucket name + region (if using S3)
+
+Example values to set:
+- `spring.datasource.url`
+- `spring.datasource.username`
+- `spring.datasource.password`
+- `aws.region`
+- `aws.s3.bucket`
+
+### 3) Run the Application
+```bash
+mvn spring-boot:run
